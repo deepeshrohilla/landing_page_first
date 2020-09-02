@@ -1,0 +1,73 @@
+@media (min-width: 991px) and (max-width: 1400px){
+    .menu{
+        display: block !important;
+    }
+}
+@media (min-width: 300px) and (max-width: 990px){
+    .menu{
+        width: 100% !important;
+        display: none;
+    }
+    .menu ul{
+        width: 100% !important;
+        height: auto !important;
+        float: left !important;
+        justify-content: center !important;
+        flex-direction: column;
+        border-top: 1px solid rgba(221, 216, 216, 0.1);
+        margin-top: 15px !important;
+    }
+    .menu li{
+        width: 100%;
+    }
+    .menu ul li a{
+        width: 100%;
+        display: block;
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.8em;
+        text-transform: capitalize;
+        text-decoration: none;
+        padding: 10px 0;
+        position: static !important;
+        transition: 0.5s;
+        text-align: center;
+    }
+    .menu ul li a:hover{
+        background-color: #ffb444;
+        color: #121e32 !important;
+    }
+    .menu ul li a::before, .menu ul li a::after{
+        display: none !important;
+    }
+    .menu ul li a:hover i{
+        color: #121e32 !important;
+    }
+    .owl-theme .owl-nav{
+        width: 65px;
+        top: 35%;
+        position: absolute;
+        right: -75px !important;
+    }
+    .contact{
+        height: auto !important;
+        padding-top: 100px !important;
+    }
+    .media{
+        padding: 10px 0px !important;
+    }
+    .footer .f-border{
+        border-left: 0px solid #fff !important;
+        border-right: 0px solid #fff !important;
+    }
+}
+@media (min-width: 800px) and (max-width: 990px){
+    .contact{
+        height: auto !important;
+        padding-top: 375px !important;
+    }
+    .footer .f-border{
+        border-left: 1px solid #fff !important;
+        border-right: 1px solid #fff !important;
+    }
+}

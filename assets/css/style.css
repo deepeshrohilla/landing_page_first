@@ -1,0 +1,720 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+@font-face{
+    font-family: my-font;
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+::selection{
+    background: #ffb444;
+    color: #121e32;
+}
+.t-yellow{
+    color: #ffb444 !important;
+}
+.t-1{
+    font-size: 3em;
+}
+.t2{
+    font-size: 1em;
+}
+.t-bold{
+    font-family: my-font !important;
+}
+p{
+    font-size: 0.85em;
+}
+
+/* header section */
+.my-header{
+    background-color: #121e32;
+}
+/* navbar section */
+.menu{
+    width: 75%;
+}
+.menu ul{
+    list-style-type: none;
+    width: 90%;
+    height: 70px;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+.menu ul li{
+    float: left;
+}
+.menu ul li a{
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8em;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+.menu ul li a:hover{
+    color: #ffb444;
+}
+.menu ul li a::before{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffb444;
+    transition: 0.5s;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+.menu ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: right;
+}
+.menu ul li a::after{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffb444;
+    transition: 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+.menu ul li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.active{
+    color: #ffb444 !important;
+}
+/* toggle button */
+.toggle-btn{
+    width: 40px;
+    height: 40px;
+    float: right;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.toggle-btn span{
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    margin: 5px;
+    float: left;
+    transition: all 0.25s ease-in-out;
+}
+.bar1{
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.bar2{
+    opacity: 0;
+    margin: 3px !important;
+}
+.bar3{
+    transform: rotate(-45deg) translate(7px, -8px);
+}
+/* top hero section */
+.hero{
+    width: 100%;
+    background: linear-gradient(0deg, #000000,#000000da,#00000065,#00000042,#00000000), url('../images/nasa.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+/* card section one */
+.card-1{
+    width: 100%;
+    background: #ffffff0e;
+    border-radius: 20px;
+}
+/* button */
+.my-btn{
+    display: block;
+    width: 150px;
+    text-decoration: none !important;
+    color: #ffb444;
+    border: 1px solid #ffb444;
+    border-radius: 25px;
+    text-align: center;
+    padding: 5px 0px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.my-btn:hover{
+    color: #121e32;
+    border-radius: 0px;
+}
+.my-btn:active{
+    color: #fff;
+}
+.my-btn::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #ffb444;
+    transform: scale(0);
+    transition: 0.5s;
+}
+.my-btn:hover::before{
+    transform: scale(1);
+}
+.my-btn:active::before{
+    background-color: #121e32;
+    transform: skewX(-70deg);
+}
+
+
+/* section one */
+.s1{
+    width: 100%;
+    height: auto;
+    float: left;
+    background-color: #fff;
+}
+.item{
+    width: 100%;
+    float: left;
+    position: relative;
+}
+.item-1{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(0deg, #000000f3,#000000c5,#0000003d,#00000013,#00000000), url('../images/seaTrees.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.item-2{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(0deg, #000000f3,#000000c5,#0000003d,#00000013,#00000000), url('../images/mountain.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.item-3{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(0deg, #000000f3,#000000c5,#0000003d,#00000013,#00000000), url('../images/tokyo.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.item div{
+    bottom: 75px;
+    position: absolute;
+}
+/* second button */
+.my-btn-1{
+    display: block;
+    width: 200px;
+    text-decoration: none !important;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    text-align: center;
+    padding: 5px 0px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.my-btn-1:hover{
+    color: #121e32;
+    border-radius: 0px;
+}
+.my-btn-1:active{
+    color: #fff;
+}
+.my-btn-1::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform: scale(0);
+    transition: 0.5s;
+}
+.my-btn-1:hover::before{
+    transform: scale(1);
+}
+.my-btn-1:active::before{
+    background-color: #121e32;
+    transform: skewX(-70deg);
+}
+.owl-carousel{
+    display: block;
+}
+.first-owl .owl-nav{
+    width: 65px;
+    top: 35%;
+    position: absolute;
+    right: -100px;
+    display: block !important;
+}
+.first-owl .owl-nav button.owl-prev, .first-owl .owl-nav button.owl-next{
+    border-radius: 50%;
+    box-shadow: 3px 5px 3px 0px #ccc;
+    width: 65px;
+    height: 65px;
+    position: relative;
+}
+.first-owl .owl-nav button span{
+    display: none;
+}
+.first-owl .owl-nav button{
+    transition: 0.5s;
+}
+.first-owl .owl-nav button:hover{
+    background-color: #121e32 !important;
+}
+.first-owl .owl-nav button.owl-prev{
+    margin: 0 0 15px 0;
+}
+.first-owl .owl-nav button.owl-prev::before{
+    content: '\f060';
+    position: absolute;
+    font-size: 1.5em;
+    color: #ffb444;
+    font-weight: 100 !important;
+    font-family: 'fontawesome';
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.first-owl .owl-nav button.owl-next::before{
+    content: '\f061';
+    position: absolute;
+    font-size: 1.5em;
+    color: #ffb444;
+    font-weight: 100 !important;
+    font-family: 'fontawesome';
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+
+
+/* section two */
+.s2{
+    width: 100%;
+    float: left;
+    background-color: #fff;
+}
+/* card two */
+.card-2{
+    border-radius: 10px;
+    box-shadow: 0 0 20px -3px #ccc;
+}
+/* button three */
+.my-btn-2{
+    display: block;
+    width: 180px;
+    text-decoration: none !important;
+    color: #3d92f6;
+    border: 1px solid #3d92f6;
+    border-radius: 25px;
+    text-align: center;
+    padding: 2px 0px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.my-btn-2:hover{
+    color: #fff;
+    border-radius: 0px;
+}
+.my-btn-2:active{
+    color: #fff;
+}
+.my-btn-2::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #3d92f6;
+    transform: scale(0);
+    transition: 0.5s;
+}
+.my-btn-2:hover::before{
+    transform: scale(1);
+}
+.my-btn-2:active::before{
+    background-color: #3d92f6;
+    transform: skewX(-70deg);
+}
+/* button four */
+.my-btn-3{
+    display: block;
+    width: 180px;
+    text-decoration: none !important;
+    color: #5e44ff;
+    border: 1px solid #5e44ff;
+    border-radius: 25px;
+    text-align: center;
+    padding: 2px 0px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.my-btn-3:hover{
+    color: #fff;
+    border-radius: 0px;
+}
+.my-btn-3:active{
+    color: #fff;
+}
+.my-btn-3::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #5e44ff;
+    transform: scale(0);
+    transition: 0.5s;
+}
+.my-btn-3:hover::before{
+    transform: scale(1);
+}
+.my-btn-3:active::before{
+    background-color: #5e44ff;
+    transform: skewX(-70deg);
+}
+/* button five */
+.my-btn-4{
+    display: block;
+    width: 180px;
+    text-decoration: none !important;
+    color: #4ee058;
+    border: 1px solid #4ee058;
+    border-radius: 25px;
+    text-align: center;
+    padding: 2px 0px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.my-btn-4:hover{
+    color: #fff;
+    border-radius: 0px;
+}
+.my-btn-4:active{
+    color: #fff;
+}
+.my-btn-4::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #4ee058;
+    transform: scale(0);
+    transition: 0.5s;
+}
+.my-btn-4:hover::before{
+    transform: scale(1);
+}
+.my-btn-4:active::before{
+    background-color: #4ee058;
+    transform: skewX(-70deg);
+}
+/* button six */
+.my-btn-5{
+    display: block;
+    width: 180px;
+    text-decoration: none !important;
+    color: #ffb444;
+    border: 1px solid #ffb444;
+    border-radius: 25px;
+    text-align: center;
+    padding: 2px 0px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.my-btn-5:hover{
+    color: #fff;
+    border-radius: 0px;
+}
+.my-btn-5:active{
+    color: #fff;
+}
+.my-btn-5::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #ffb444;
+    transform: scale(0);
+    transition: 0.5s;
+}
+.my-btn-5:hover::before{
+    transform: scale(1);
+}
+.my-btn-5:active::before{
+    background-color: #ffb444;
+    transform: skewX(-70deg);
+}
+
+
+
+/* section three */
+.s3{
+    width: 100%;
+    float: left;
+    background-color: #fff;
+}
+
+
+/* section two */
+.s4{
+    width: 100%;
+    float: left;
+    background-color: #fff;
+}
+/* third card */
+.card-3{
+    background: radial-gradient(#3d92f6,#5e44ff);
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+.card-3::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 15px;
+    left: -15px;
+    width: 100%;
+    height: 90%;
+    background: radial-gradient(#3d92f6,#5e44ff);
+    opacity: 0.5;
+    border-radius: 20px;
+}
+.card-3::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 30px;
+    left: -30px;
+    width: 100%;
+    height: 80%;
+    background: radial-gradient(#3d92f6,#5e44ff);
+    opacity: 0.3;
+    border-radius: 20px;
+}
+.card-3 .fa-quote-left{
+    font-size: 3em;
+}
+/* second owl carousel */
+.second-owl .owl-nav {
+    width: 100%;
+    top: 25%;
+    position: absolute;
+    left: 0 !important;
+    display: block !important;
+}
+.second-owl .owl-nav button:hover{
+    background-color: #fff !important;
+    color: #3d92f6 !important;
+}
+.second-owl .owl-nav button.owl-prev{
+    float: left;
+    font-size: 3.5em;
+    color: #3d92f6;
+}
+.second-owl .owl-nav button.owl-next{
+    float: right;
+    font-size: 3.5em;
+    color: #3d92f6;
+}
+.second-owl .owl-dots{
+    padding-top: 20px;
+}
+.second-owl button.owl-dot:focus{
+    border: none !important;
+    outline: none !important;
+}
+.second-owl .owl-dots .owl-dot:hover span,.second-owl .owl-dots .owl-dot:active span,.second-owl .owl-dots .owl-dot.active span {
+    background: #3d92f6;
+}
+
+
+
+/* section five */
+.s5{
+    width: 100%;
+    float: left;
+    background-color: #fff;
+}
+.form{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #00000029;
+    padding: 35px 40px;
+}
+.form p{
+    font-size: 0.8em;
+    color: #2d5a88;
+}
+.form fieldset{
+    border: 1px solid #2d5a88;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.form fieldset legend {
+    display: block;
+    width: auto;
+    padding: 5px;
+    margin-bottom: 0;
+    font-size: 0.7rem;
+    line-height: inherit;
+    color: inherit;
+    white-space: normal;
+    margin-left: 10px;
+    color: #2d5a88;
+}
+.form fieldset input,.form fieldset textarea{
+    width: 100%;
+    border: none;
+    color: #2d5a88;
+    font-size: 0.8em;
+    resize: none;
+}
+.form-btn{
+    width: 150px;
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #2d5a88;
+    background-color: #2d5a88;
+    text-transform: uppercase;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+.form-btn:hover{
+    border-radius: 0px;
+    color: #2d5a88;
+}
+.form-btn::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #2d5a88;
+    transition: 0.5s;
+    transform: scale(0);
+}
+.form-btn:hover::before{
+    transform: scale(1);
+    border-radius: 0px;
+}
+.contact{
+    height: 525px;
+    position: relative;
+    padding-top: 275px;
+}
+.contact .media{
+    padding: 10px 25px;
+}
+.contact .media h6{
+    font-size: 0.8em;
+    color: #7a7a7a;
+}
+.contact .media h5{
+    color: #2d5a88;
+    font-weight: 900 !important;
+}
+.contact .media i{
+    font-size: 1.7em;
+    color: #7a7a7a;
+    padding: 0 20px;
+}
+
+
+/* footer section */
+.footer{
+    width: 100%;
+    float: left;
+    background-color: #121e32;
+}
+.footer p{
+    color: #c0c0c0;
+    font-size: 0.8em;
+}
+.footer .f-border{
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.footer p a{
+    color: #c0c0c0;
+    font-size: 0.8em;
+    text-decoration: none !important;
+    transition: 0.5s;
+}
+.footer p a:hover{
+    color: #ffb444;
+}
+.footer .media{
+    padding: 5px 0 0 10px;
+}
+.footer .media h6{
+    font-size: 0.7em;
+    color: #c0c0c0;
+}
+.footer .media i{
+    font-size: 1em;
+    color: #eee;
+    padding: 0 15px 0 0;
+}
